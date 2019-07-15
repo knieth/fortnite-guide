@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+Nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(73,79,82);
+  color:white;
+}
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  list-style:none;
+}
+.items-container{
+  padding:1em;
+  display:grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.thumbnail{
+  width:50%;
+}
