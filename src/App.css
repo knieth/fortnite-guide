@@ -16,12 +16,47 @@ Nav{
   align-items:center;
   list-style:none;
 }
-.items-container{
+.shop-items-container{
   padding:1em;
   display:grid;
-  grid-gap:10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-.thumbnail{
-  width:50%;
+.shop-items-container div{
+  margin:1em;
 }
+.shop-thumbnail{
+  width:100%;
+  transition:.25s ease-in;
+}
+.shop-thumbnail:hover{
+  transform:scale(1.1);
+}
+.shop-items-link{
+  color:#4F4F4F;
+  text-decoration:none;
+}
+/* Item Detail */
+.itemDetail-image{
+  width:30%;
+}
+.item-detail-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* News */
+.news-container{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  padding:2em;
+}
+.news-container img{
+  width:55%;
+}
+.text-left{
+  text-align:left;
+}
+

@@ -5,6 +5,8 @@ import About from './Components/About';
 import Shop from './Components/Shop';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ItemDetail from './Components/ItemDetail';
+import UpcomingItems from './Components/UpcomingItems';
+import News from './Components/News';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/about" component={About}/>
           <Route path="/shop" exact component={Shop}/>
           <Route path="/shop/:id" component={ItemDetail}/>
+          <Route path="/upcoming/:id" component={ItemDetail}/>
+          <Route path="/news" component={News}/>
         </Switch>
       </div>
     </Router>
@@ -24,7 +28,8 @@ function App() {
 
 const Home = () => (
   <div>
-    <h1>Home Page</h1>
+    <UpcomingItems/>
+    
   </div>
 );
 
