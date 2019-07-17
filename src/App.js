@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ItemDetail from './Components/ItemDetail';
 import UpcomingItems from './Components/UpcomingItems';
 import News from './Components/News';
+import Challenges from './Components/Challenges';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/shop/:id" component={ItemDetail}/>
           <Route path="/upcoming/:id" component={ItemDetail}/>
           <Route path="/news" component={News}/>
+          <Route path="/challenges" component={Challenges}/>
         </Switch>
       </div>
     </Router>
