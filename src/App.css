@@ -75,3 +75,8 @@ Nav{
   padding:1em;
   color:white;
 }
+
+/* home */
+.home-slider{
+  padding:0 0 10% 0;
+}
