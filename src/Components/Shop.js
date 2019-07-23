@@ -16,19 +16,23 @@ function Shop() {
     console.log(items.items);
     setItems(items.items);
   }
+  
 
   return (
     <div>
-      <h1>Daily Items</h1>
-      <div className="shop-items-container">
-        {items.map(item =>(
-          <div key={item.itemid}>
-          <Link className="shop-items-link" to={`/shop/${item.itemid}`} >
-            <img className="shop-thumbnail" src={item.item.images.information} alt={item.name}/>
-            </Link>
-          </div>
-        ))}
+      <div className="shop-container">
+        <h3>Daily Items</h3>
+        <div className="shop-items-container">
+          {items.map(item =>(
+            <div key={item.itemid}>
+            <Link className="shop-items-link" to={`/shop/${item.itemid}`} >
+              <img className="shop-thumbnail" src={item.item.images.information} alt={item.name}/>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
+      
     </div>
   );
 }

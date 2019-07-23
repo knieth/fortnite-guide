@@ -4,31 +4,33 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
 
-    const navStyle = {
-        color:'white',
+    const navLogoStyle = {
+        color:'#333333',
         textDecoration: 'none'
+    };
+
+    const navLinkStyle = {
+        color:'#333333',
+        textDecoration: 'none',
+        paddingLeft:'.25em',
+        paddingRight:'.25em',
+        fontSize:'.90em'
     };
 
 
     return (
     <nav>
-        <Link style={navStyle} to="/">
-            <h3>Logo</h3>
+        <Link style={navLogoStyle} to="/">
+            <h4>Fortpanion</h4>
         </Link>
         <ul className="nav-links">
-            <Link style={navStyle} to="/">
+            <Link style={navLinkStyle} to="/">
                 <li>Home</li>
             </Link>
-            <Link style={navStyle} to="/news">
-                <li>News</li>
-            </Link>
-            <Link style={navStyle} to="/challenges">
+            <Link style={navLinkStyle} to="/challenges">
                 <li>Challenges</li>
             </Link>
-            <Link style={navStyle} to="/about">
-                <li>About</li>
-            </Link>
-            <Link style={navStyle} to="/shop">
+            <Link style={navLinkStyle} to="/shop">
                 <li>Shop</li>
             </Link>
         </ul>

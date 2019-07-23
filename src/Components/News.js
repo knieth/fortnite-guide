@@ -1,4 +1,5 @@
 import React, {useState, useEffect}  from 'react';
+import { Carousel,Image } from 'react-bootstrap';
 import '../App.css';
 
 function News() {
@@ -10,7 +11,7 @@ function News() {
   }, []);
 
   const [news, setNews] = useState([]);
-
+ 
   const fetchItems = async () => {
     const data = await fetch('https://fortnite-public-api.theapinetwork.com/prod09/br_motd/get');
     const news = await data.json();
@@ -21,26 +22,37 @@ function News() {
   
 
   const NewsData = news.map(news => (
-    <div key={news.title} className="news-container">
-       <h3>{news.title}</h3>
-       <img src={news.image} alt=""/>
-       <p>{news.body}</p>
-       <p>{new Date(news.time * 1000).toDateString()}</p>
-    </div>
+       
+        
+    <Carousel.Item key={news.title}>
+        <Image
+        className="d-block w-100"
+        src={news.image}
+        alt="images"
+        fluid
+        />
+        <Carousel.Caption>
+        <h3>{news.title}</h3>
+        <p>{news.body}</p>
+        <p>{new Date(news.time * 1000).toLocaleDateString()}</p>
+        </Carousel.Caption>
+    </Carousel.Item>
+    
 ));
 
 
-  return (
+return (
 
-    
 
-    <div>
-      <h1>News</h1>
-     {
+<div className="home-slider" >
+    <Carousel fade={true}>
+    {
         NewsData
-     }
-    </div>
-  );
+    }
+    </Carousel>
+
+</div>
+);
 }
 
 export default News;

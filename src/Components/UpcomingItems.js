@@ -19,7 +19,7 @@ function UpcomingItems() {
 
   return (
     <div>
-      <h1>Upcoming Items</h1>
+      <h3>Upcoming Items</h3>
       <div className="shop-items-container">
         {upcomingItems.map(item =>(
           <div key={item.itemid}>

@@ -11,7 +11,6 @@ function Challenges() {
 
   const [challenges, setChallenges] = useState([]);
 
-  const [week, setWeek] = useState([]);
 
   const [currentWeek, setcurrentWeek] = useState([]);
 
@@ -22,7 +21,6 @@ function Challenges() {
     setChallenges(challenges);
     const thisWeek = Object.values(challenges.challenges)[Object.values(challenges.challenges).length - 1];
     setcurrentWeek(thisWeek);
-    setWeek(challenges.challenges);
     console.log('thisweek',thisWeek);
     //setcurrentWeek(challenges.currentweek);
   }
@@ -44,10 +42,12 @@ function Challenges() {
          
          currentWeek.map(thisweek => (
            <div key={thisweek.identifier} >
-              <h3>{thisweek.challenge}</h3>
-              <p>Difficulty: {thisweek.difficulty}</p>
-              <p>Stars: {thisweek.stars}</p>
-              <p>Total: {thisweek.total}</p>
+              <h4>{thisweek.challenge}</h4>
+              <hr/>
+                <p>Difficulty: {thisweek.difficulty}</p>
+                <p>Stars: {thisweek.stars}</p>
+                <p>Total: {thisweek.total}</p>
+              
            </div>
          ))
        }
